@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Calendar Dashboard</h1>
+        </header>
+
+        <main>
+            <div class="dashboard-content">
+                <aside class="sidebar">
+                    <div class="date-picker-section">
+                        <label for="datePicker">Select Date:</label>
+                        <input type="date" id="datePicker" class="date-picker">
+                    </div>
+                </aside>
+
+                <section class="main-content">
+                    <div class="date-display">
+                        <h2 id="selectedDate"></h2>
+                    </div>
+
+                    <div class="sessions-container">
+                        <div class="card">
+                            <h3>Sessions</h3>
+                            <div id="sessionsList" class="items-list">
+                                <p class="empty-message">No sessions for this date</p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <h3>Events</h3>
+                            <div id="eventsList" class="items-list">
+                                <p class="empty-message">No events for this date</p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <h3>Tasks</h3>
+                            <div id="tasksList" class="items-list">
+                                <p class="empty-message">No tasks for this date</p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <h3>Reminders</h3>
+                            <div id="remindersList" class="items-list">
+                                <p class="empty-message">No reminders for this date</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
